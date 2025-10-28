@@ -17,13 +17,29 @@ public class Main
         int bianliang = in.nextInt();
         System.out.println(bianliang2 + "-" + bianliang + "=" + (bianliang2-bianliang));    //输出公式
          */
+        /*
         System.out.println("输入条件");
         Scanner in = new Scanner(System.in);
+        int foot = (int) (32/3.0);    //括号里的int或double可以强制转换右面公式的结果为整数或者非整数。
         System.out.println("输入英尺：");
-        int foot = in.nextInt();
+//        int foot = in.nextInt();
         System.out.println("输入英寸：");
         double inch = in.nextDouble();    //*** double,双精度浮点数的类型名，可以加给inch或者foot。用nextDouble，就可以输入浮点数了。
         System.out.println("foot=" + foot + ",inch=" + inch);
-        System.out.println((foot+inch/12.0)*0.3048);    //*** 小数点10.0和10是不一样的数字，一个是非整数（浮点数）一个是整数,不加小数点，计算后小数点后面的所有值都是零，只检测前面整数。
+        System.out.println((int) ((foot+inch/12.0)*0.3048*100) + "cm");    //*** 小数点10.0和10是不一样的数字，一个是非整数（浮点数）一个是整数,不加小数点，计算后小数点后面的所有值都是零，只检测前面整数。
+        */
+        Scanner in = new Scanner(System.in);
+//        System.out.println("是否相同：" + (5==5.0));    //非整数5.0和整数5是相等的。
+        System.out.println("请投入金币：");
+        int tourujine = in.nextInt();
+        System.out.println("是否大于10：" + (tourujine >= 10));    //小判断。是就是T，不是就是F。
+        if (tourujine >= 10)
+        {
+            System.out.println("投入金额：" + tourujine);
+            System.out.println("**************************");
+            System.out.println("JAVA城车票");
+            System.out.println("**************************");
+            System.out.println("找零：" + (tourujine - 10));
+        }
     }
 }
