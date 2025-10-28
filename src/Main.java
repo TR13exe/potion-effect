@@ -41,5 +41,9 @@ public class Main
             System.out.println("**************************");
             System.out.println("找零：" + (tourujine - 10));
         }
+        else
+        {
+            System.out.println("你的金额不够");    //*** if-else，如果。。。否则。。。语句，else是否则的意思。
+        }
     }
 }
